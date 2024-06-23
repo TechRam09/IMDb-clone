@@ -9,6 +9,7 @@ import {
 } from "react-router-dom";
 import Layout from "./Layout.jsx";
 import Home from "./pages/Home/Home.jsx";
+import { DataProvider } from "./context/dataContext.jsx";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -22,7 +23,9 @@ const router = createBrowserRouter(
 );
 
 ReactDOM.createRoot(document.getElementById("root")).render(
-  <React.StrictMode>
-    <RouterProvider router={router} />
-  </React.StrictMode>
+  <DataProvider>
+    <React.StrictMode>
+      <RouterProvider router={router} />
+    </React.StrictMode>
+  </DataProvider>
 );
