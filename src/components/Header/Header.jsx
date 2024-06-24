@@ -4,7 +4,7 @@ import Logo from "../../assets/IMDB_Logo.png";
 
 function Header() {
   return (
-    <header className=" h-[80px] flex justify-between items-center mb-6">
+    <header className=" h-[70px] flex justify-between items-center">
       <nav className="px-10">
         <div className="flex items-center">
           <Link to="/">
