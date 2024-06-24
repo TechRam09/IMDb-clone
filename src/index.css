@@ -1,3 +1,10 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+.posterImage_overlay{
+    background-image: linear-gradient(rgb(0, 0, 0, 0), rgb(0, 0, 0, 1)) !important;
+    /* opacity: 1; */
+        transition: opacity .3s;
+}
