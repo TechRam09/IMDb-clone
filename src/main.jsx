@@ -14,7 +14,7 @@ import { DataProvider } from "./context/dataContext.jsx";
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path="/" element={<Layout />}>
-      <Route path="" element={<Home />} />
+      <Route index element={<Home />} />
       <Route path="movie/:id" element={<h1>Movie detail page</h1>} />
       <Route path="movies/:type" element={<h1>Movie list page</h1>} />
       <Route path="/*" element={<h1>404 Page not Found</h1>} />
