@@ -4,7 +4,7 @@ const DataContext = createContext();
 
 export const DataProvider = ({ children }) => {
   const [popular, setPopular] = useState([]);
-  const [topRated, setTopRated] = useState([]);
+  const [movieList, setMovieList] = useState([]);
   const [upcoming, setUpcoming] = useState([]);
 
   return (
@@ -12,8 +12,8 @@ export const DataProvider = ({ children }) => {
       value={{
         popular,
         setPopular,
-        topRated,
-        setTopRated,
+        movieList,
+        setMovieList,
         upcoming,
         setUpcoming,
       }}
