@@ -30,7 +30,11 @@ function Home() {
           transitionTime={3}
         >
           {popular.map((movie) => (
-            <Link key={movie.id} className="text-white" to="/movie/${movie.id}">
+            <Link
+              key={movie.id}
+              className="text-white"
+              to={`/movie/${movie.id}`}
+            >
               <div className="posterImage h-[600px]">
                 <img
                   src={`https://image.tmdb.org/t/p/original${
