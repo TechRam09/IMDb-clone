@@ -16,7 +16,8 @@ function Home() {
       .then((data) => {
         console.log(data);
         setPopular(data.results);
-      });
+      })
+      .catch((error) => console.error("Fetching error: ", error));
   }, []);
 
   return (
