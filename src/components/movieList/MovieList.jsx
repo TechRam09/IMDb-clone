@@ -19,7 +19,8 @@ function MovieList() {
       }?api_key=${apiKey}&language=en-US`
     )
       .then((res) => res.json())
-      .then((data) => setMovieList(data));
+      .then((data) => setMovieList(data.results))
+      .catch((error) => console.error("Fetching error: ", error));
   };
 
   return (
@@ -29,7 +30,7 @@ function MovieList() {
       </h2>
       <div className="list_cards flex flex-wrap justify-center">
         {movieList.map((movie) => (
-          <Card movie={movie} />
+          <Card key={movie.id} movie={movie} />
         ))}
       </div>
     </div>
