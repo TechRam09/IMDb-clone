@@ -23,9 +23,11 @@ function MovieList() {
   };
 
   return (
-    <div className="movie_list">
-      <h2 className="list_title">{(type ? type : "popular").toUpperCase()}</h2>
-      <div className="list_cards">
+    <div className="movie_list pt-0 pb-12 pl-12 pr-12">
+      <h2 className="list_title text-3xl leading-10">
+        {(type ? type : "popular").toUpperCase()}
+      </h2>
+      <div className="list_cards flex flex-wrap justify-center">
         {movieList.map((movie) => (
           <Card movie={movie} />
         ))}
