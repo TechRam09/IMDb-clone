@@ -1,6 +1,9 @@
 import React, { useEffect, useState } from "react";
+import Skeleton, { SkeletonTheme } from "react-loading-skeleton";
 
-function Card() {
+function Card({ movie }) {
+  const [isLoading, setIsLoading] = useState(true);
+
   return <></>;
 }
 
