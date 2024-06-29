@@ -12,6 +12,8 @@ function Card({ movie }) {
   return (
     <>
       {
+        isLoading
+        ?
         <div>
           <SkeletonTheme color="#202020" highlightColor="#444">
             <Skeleton height={300} duration={2} />
