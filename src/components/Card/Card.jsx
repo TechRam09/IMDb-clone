@@ -9,7 +9,17 @@ function Card({ movie }) {
     }, 1500);
   }, []);
 
-  return <></>;
+  return (
+    <>
+      {
+        <div>
+          <SkeletonTheme color="#202020" highlightColor="#444">
+            <Skeleton height={300} duration={2} />
+          </SkeletonTheme>
+        </div>
+      }
+    </>
+  );
 }
 
 export default Card;
