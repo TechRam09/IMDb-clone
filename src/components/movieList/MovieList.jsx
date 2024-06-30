@@ -10,12 +10,12 @@ function MovieList() {
 
   useEffect(() => {
     getData();
-  }, [type]);
+  }, [type, apiKey]); // Ensure dependencies are correct
 
   const getData = () => {
     fetch(
       `https://api.themoviedb.org/3/movie/${
-        type ? type : "popular"
+        type ? type : "now_playing"
       }?api_key=${apiKey}&language=en-US`
     )
       .then((res) => res.json())
@@ -24,9 +24,9 @@ function MovieList() {
   };
 
   return (
-    <div className="movie_list pt-0 pb-12 pl-12 pr-12">
-      <h2 className="list_title text-3xl leading-10">
-        {(type ? type : "popular").toUpperCase()}
+    <div className="movie_list pt-4 pb-12 pl-12 pr-12 ">
+      <h2 className="list_title text-3xl leading-10 my-8">
+        {(type ? type : "now playing").split("_").join(" ").toUpperCase()}
       </h2>
       <div className="list_cards flex flex-wrap justify-center">
         {movieList.map((movie) => (
