@@ -24,11 +24,11 @@ function Card({ movie }) {
       ) : (
         <Link to={`/movie/${movie.id}`}>
           <div
-            className="cards inline-block relative transition-transform duration-[2000] overflow-hidden m-[0.19rem] rounded-[10px] h-[300px] min-w-[200px] cursor-pointer z-0 hover:z-[1000] hover:scale-[1.2]"
+            className="cards inline-block relative transition-transform duration-[2000] overflow-hidden m-[0.19rem] rounded-[10px] h-[200px] lg:h-[300px] min-w-[200px] cursor-pointer z-0 hover:z-[1000] hover:scale-[1.2]"
             style={{ border: "1px solid rgb(99, 99, 99)" }}
           >
             <img
-              className="h-[300px]"
+              className="h-full w-full object-fill lg:object-cover"
               src={`https://image.tmdb.org/t/p/original${
                 movie ? movie.poster_path : ""
               }`}
