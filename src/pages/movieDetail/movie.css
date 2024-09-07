@@ -144,3 +144,158 @@
     align-items: center;
     justify-content: center;
 }
+
+
+@media only screen and (max-width: 768px) {
+    .movie__intro{
+    display: none;
+}
+    .movie__detail {
+        flex-direction: column;
+        bottom: 0;
+        width: 90%;
+        /* Adjust the width to fit smaller screens */
+    }
+
+    .movie__poster {
+        width: 300px;
+        /* Adjust width for tablets */
+    }
+
+    .movie__backdrop {
+        height: 350px;
+        /* Reduce height for tablets */
+    }
+
+    .movie__name {
+        font-size: 2.5rem;
+    }
+
+    .movie__genre {
+      
+        margin-right: 0;
+       
+    }
+
+    .synopsisText {
+        font-size: 1.2rem;
+    }
+
+    .movie__links { 
+    bottom: 22px;
+    flex-direction: column;
+    width: 90%;
+    }
+
+    .movie__detailLeft {
+     margin-right: 0px;
+    }
+
+
+    .movie__Button {
+    padding: 0.5rem 0rem;
+    width: 140px;
+    margin-top: 20px;
+    }
+
+     .movie__poster {
+        width: 300px;
+    }
+
+    .movie__backdrop {
+        height: 300px;
+        /* Smaller backdrop height for mobile */
+    }
+
+    .movie__name {
+        font-size: 2rem;
+        /* Reduce the title size */
+    }
+
+    .movie__detailRight {
+        height: auto;
+        /* Let the height adjust dynamically */
+    }
+
+    .movie__genre {
+        padding: 0.3rem;
+        font-size: 0.8rem;
+    }
+
+    .synopsisText {
+        font-size: 1rem;
+    }
+
+    .movie__heading {
+        margin-top: 15px;
+        font-size: 1.8rem;
+    }
+
+        .movie__production {
+            width: 100%;
+            
+            margin-bottom: 4rem;
+            flex-wrap: wrap;
+            gap: 25px;
+        }
+
+                .productionCompanyImage {
+                    
+                    width: 100px;
+                }
+}
+
+/* Additional media query for phones */
+@media only screen and (max-width: 480px) {
+.movie__intro{
+    display: none;
+}
+
+    .movie__poster {
+        width: 300px;
+    }
+
+    .movie__backdrop {
+        height: 300px;
+        /* Smaller backdrop height for mobile */
+    }
+
+    .movie__name {
+        font-size: 2rem;
+        /* Reduce the title size */
+    }
+
+    .movie__detailRight {
+        height: auto;
+        /* Let the height adjust dynamically */
+    }
+
+    .movie__genre {
+        padding: 0.3rem;
+        font-size: 0.8rem;
+    }
+
+    .synopsisText {
+        font-size: 1rem;
+    }
+
+    .movie__heading {
+        margin-top: 15px;
+        font-size: 1.8rem;
+    }
+
+        .movie__production {
+            width: 100%;
+            
+            margin-bottom: 4rem;
+            flex-wrap: wrap;
+            gap: 25px;
+        }
+
+                .productionCompanyImage {
+                    
+                    width: 100px;
+                }
+
+                
+}
