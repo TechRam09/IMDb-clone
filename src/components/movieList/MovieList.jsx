@@ -25,7 +25,7 @@ function MovieList() {
 
   return (
     <div className="movie_list pt-4 pb-12 pl-12 pr-12 ">
-      <h2 className="list_title text-3xl leading-10 my-8">
+      <h2 className="list_title text-lg lg:text-3xl leading-10 my-8">
         {(type ? type : "now playing").split("_").join(" ").toUpperCase()}
       </h2>
       <div className="list_cards flex flex-wrap justify-center">
