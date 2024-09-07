@@ -29,7 +29,9 @@ function Home() {
           infiniteLoop={true}
           showStatus={false}
           showThumbs={false}
-          transitionTime={4}
+          transitionTime={40}
+          swipeable={true}
+          emulateTouch={true}
         >
           {popular.map((movie) => (
             <Link
@@ -37,27 +39,27 @@ function Home() {
               className="text-white"
               to={`/movie/${movie.id}`}
             >
-              <div className="posterImage h-[600px]">
+              <div className="posterImage lg:h-[600px]">
                 <img
                   src={`https://image.tmdb.org/t/p/original${
                     movie && movie.backdrop_path
                   }}`}
                   alt="movie_image"
-                  className="m-auto w-full block"
+                  className="m-auto w-full h-[400px] md:h-[600px] lg:h-auto object-cover block"
                 />
               </div>
-              <div className="posterImage_overlay absolute bottom-0 p-20 h-[70%] flex flex-col items-start justify-end w-full opacity-100 hover:opacity-100">
-                <div className="posterImage_title font-black text-7xl mb-2 text-left">
+              <div className="posterImage_overlay absolute bottom-0 p-4 lg:p-20 h-[60%] md:h-[70%] w-full flex flex-col items-start justify-end bg-gradient-to-t from-black to-transparent">
+                <div className="posterImage_title font-bold text-[1.25rem] leading-6 md:text-5xl lg:text-7xl mb-1 md:mb-2 text-left">
                   {movie ? movie.original_title : ""}
                 </div>
-                <div className="posterImage_runtime text-3xl mb-4">
+                <div className="posterImage_runtime  text-[0.5rem]   md:text-2xl lg:text-3xl mb-2 md:mb-4">
                   {movie ? movie.release_date : ""}
-                  <span className="posterImage__rating ml-4">
+                  <span className="posterImage__rating ml-2 md:ml-4">
                     {movie ? movie.vote_average.toFixed(2) : ""}
                     <i className="fas fa-star" />{" "}
                   </span>
                 </div>
-                <div className="postImage_description text-left w-1/2 italic mb-1 text-[1rem]">
+                <div className="postImage_description text-left w-full md:w-1/2 italic mb-1 text-[0.5rem] leading-4 md:text-sm lg:text-base">
                   {movie ? movie.overview : ""}
                 </div>
               </div>
